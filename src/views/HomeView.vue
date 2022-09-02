@@ -8,6 +8,7 @@
           <v-spacer></v-spacer>
           <v-btn rounded color="#2aa5a0" dark class="px-8">See All</v-btn>
         </v-toolbar>
+        <Products/>
         
       </div>
     </div>
@@ -18,6 +19,7 @@
 <script>
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Products from '../components/Products'
 
 export default {
   name: "HomeVue",
@@ -25,6 +27,7 @@ export default {
   components: {
     NavBar,
     Footer,
+    Products
   },
 
 };
