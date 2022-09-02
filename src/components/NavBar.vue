@@ -1,4 +1,5 @@
 <template>
+    <header>
   <div class="header">
     <div class="logo">
         <h4 class="sweet">eFood</h4>
@@ -8,12 +9,13 @@
 <div class="d-flex cart">
   <i class="fa fa-shopping-cart cart-icon"></i>
   <span class="cart-count"></span>
-  <h5 class="login">LogIn</h5>
-  <h5 class="sign" >Sign up</h5>
+  <v-btn  class="login" >LogIn</v-btn>
+  <v-btn class="sign" >Sign up</v-btn>
 
 </div>
 
-  </div>   
+  </div>
+</header>   
 </template>
 
 
