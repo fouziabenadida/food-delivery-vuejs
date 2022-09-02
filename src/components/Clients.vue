@@ -53,19 +53,19 @@
             clients: [
         {
           img: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-          title: "Kareem Benji",
+          title: "Yahia.B",
           subtitle: "CPO on Maqua",
           bio: "If you enjoy using Vuetify, please take a few seconds to rate your experience with the framework. It really helps!",
         },
         {
           img: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-          title: "AAE IdeaPro",
+          title: "Ferhat.C",
           subtitle: "CPO on Maqua",
           bio: "If you enjoy using Vuetify, please take a few seconds to rate your experience with the framework. It really helps!",
         },
         {
           img: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-          title: "Raul Seem ",
+          title: "Fouzia BENADIDAS ",
           subtitle: "CPO on Maqua",
           bio: "If you enjoy using Vuetify, please take a few seconds to rate your experience with the framework. It really helps!",
         },

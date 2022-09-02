@@ -29,7 +29,7 @@
               >Our Trusted Partner</v-toolbar-title
             >
           </v-toolbar>
-          
+          <Partner/>
       </div>
     </div>
     <Footer />
@@ -41,6 +41,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Products from "../components/Products";
 import Clients from '../components/Clients'
+import Partner from '../components/Partner'
 
 export default {
   name: "HomeVue",
@@ -49,7 +50,8 @@ export default {
     NavBar,
     Footer,
     Products,
-    Clients
+    Clients,
+    Partner
   },
 };
 </script>
