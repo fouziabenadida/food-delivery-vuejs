@@ -46,10 +46,11 @@
   
   <script>
   export default {
-    data: () => ({
-      rating: 4.5,
-    
-      clients: [
+    name:'ClientsViewS',
+    data ()  {
+        return {
+            rating: 4.5,
+            clients: [
         {
           img: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
           title: "Kareem Benji",
@@ -69,7 +70,11 @@
           bio: "If you enjoy using Vuetify, please take a few seconds to rate your experience with the framework. It really helps!",
         },
       ],
-    }),
+        }
+      
+    
+     
+    },
   };
   </script>
   
