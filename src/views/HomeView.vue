@@ -1,6 +1,7 @@
 <template>
  <div>
   <NavBar/>
+  <h1>hello</h1>
  </div>
 </template>
 
