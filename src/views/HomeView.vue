@@ -8,6 +8,7 @@
           <v-spacer></v-spacer>
           <v-btn rounded color="#2aa5a0" dark class="px-8">See All</v-btn>
         </v-toolbar>
+        
       </div>
     </div>
     <Footer/>
@@ -25,5 +26,6 @@ export default {
     NavBar,
     Footer,
   },
+
 };
 </script>
