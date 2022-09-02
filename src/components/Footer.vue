@@ -39,7 +39,7 @@
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
           <v-card-text class="white--text pt-0">
-            <h3>Dellvery</h3>
+            <h3>Delivery</h3>
           </v-card-text>
           <v-card-text class="grey--text"> Cost on Delivery </v-card-text>
           <v-card-text class="grey--text mt-n4"> Payment Method </v-card-text>
