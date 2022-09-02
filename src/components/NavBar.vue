@@ -2,7 +2,7 @@
     <header>
   <div class="header">
     <div class="logo">
-        <h4 class="sweet">eFood</h4>
+        <h4 class="sweet">eFood-Delivery</h4>
         <img class="photo" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" width="45px " height="45px" style="margin-left: 10px "  />
     </div>
 
