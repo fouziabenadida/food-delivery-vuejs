@@ -87,6 +87,7 @@ export default {
     Products,
     Clients,
     Partner,
-  },
+  }
+  
 };
 </script>

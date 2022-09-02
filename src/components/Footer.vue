@@ -41,9 +41,9 @@
           <v-card-text class="white--text pt-0">
             <h3>Dellvery</h3>
           </v-card-text>
-          <v-card-text class="grey--text"> Cost on Delevery </v-card-text>
+          <v-card-text class="grey--text"> Cost on Delivery </v-card-text>
           <v-card-text class="grey--text mt-n4"> Payment Method </v-card-text>
-          <v-card-text class="grey--text mt-n4"> Delevery Astus </v-card-text>
+          <v-card-text class="grey--text mt-n4"> Delivery Astus </v-card-text>
           <v-card-text class="grey--text mt-n4"> Returns </v-card-text>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="4">
