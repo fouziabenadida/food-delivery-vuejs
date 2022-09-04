@@ -8,7 +8,7 @@
 
 <div class="d-flex cart">
   <i class="fa fa-shopping-cart cart-icon"></i>
-  <span class="cart-count"></span>
+  <span class="cart-count">{{count}}</span>
   <v-btn  class="login" >LogIn</v-btn>
   <v-btn class="sign" >Sign up</v-btn>
 
@@ -21,7 +21,13 @@
 
 <script>
 export default {
-    name:'NavBar'
+    name:'NavBar',
+
+    computed: {
+        count() {
+            return this.$store.state.cartItemCount;
+        }
+    }
 }
 
 </script>

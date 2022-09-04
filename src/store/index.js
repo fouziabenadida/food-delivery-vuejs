@@ -35,10 +35,10 @@ export default new Vuex.Store({
       {
         id: 6, name: "Sushi", img: "https://images.unsplash.com/photo-1562802378-063ec186a863?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80", price: "90.54", description: "Delicious", rate: "4.3"
       }
-    ]
+    ],
 
-
-
+    cartItemCount: 0,
+    cartItem: [],
 
   },
   getters: {
