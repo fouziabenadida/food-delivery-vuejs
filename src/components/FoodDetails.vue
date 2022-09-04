@@ -1,27 +1,32 @@
 <template>
-  <div class="d-flex food-details-outer">
+  <div>
     <NavBar />
-    <div class="food-details">
-      <div class="container mb-5">
-        <h4 class="my-4 fw-600">Add item to cart</h4>
-        <div class="row">
-          <div class="col md-4" style="cursor: pointer">
-            <img src="" width="300" height="300 " style="border-radius: 15px" />
-          </div>
-          <div class="col mb-4" style="cursor: pointer">
-            <h5 class="my-4 fw-600">Name:</h5>
-            <h5 class="my-4 fw-600">Price:</h5>
-            <h5 class="my-4 fw-600">Description:</h5>
-            <h5 class="my-4 fw-600">Rate:</h5>
-          </div>
-          <div>
-            <v-btn @click="goToCart()" color="warning" dark> Go to cart</v-btn>
-            <v-btn color="success" dark>Add item</v-btn>
-            <v-btn color="danger" dark> Remove item </v-btn>
-          </div>
-        </div>
-      </div>
-    </div>
+    <v-container fluid>
+      <v-col cols="12" xs="12" sm="12" md="12">
+        <v-card class="mx-auto" width="70%" >
+          <v-img :src="details.img" max-height="700"></v-img>
+
+          <v-card-title> Price: ${{ details.price }} </v-card-title>
+          <v-card-title> Rate: {{ details.rate }} </v-card-title>
+          <v-card-subtitle>  {{ details.description }} </v-card-subtitle>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <div class="text-center">
+              <v-chip @click="goToCart()" class="ma-2" color="primary">
+                Go to cart
+              </v-chip>
+
+              <v-chip class="ma-2" color="green"> Add item </v-chip>
+
+              <v-chip class="ma-2" color="red" text-color="white"
+                >Remove item</v-chip
+              >
+            </div>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-container>
+
     <Footer />
   </div>
 </template>
@@ -30,6 +35,7 @@
 <script>
 import NavBar from "./NavBar.vue";
 import Footer from "./Footer.vue";
+
 export default {
   name: "food-details",
   components: {
@@ -41,10 +47,23 @@ export default {
       this.$router.push("/cart");
     },
   },
+  data() {
+    return {
+      details: {},
+    };
+  },
+  created() {
+    var product = this.$store.state.products.filter(
+      (x) => x.id == this.$route.params.id
+    )[0];
+
+    this.details = product;
+  },
+ 
 };
 </script>
 
 
 
-<style>
+<style scoped>
 </style>
