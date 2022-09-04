@@ -5,7 +5,7 @@
       xs="12"
       sm="6"
       md="4"
-      @click="FoodDetails('items')"
+     
       v-for="(product, i) in products"
       :key="i"
     >
@@ -21,7 +21,7 @@
         </v-card-subtitle>
 
         <v-card-actions>
-          <v-btn color="orange lighten-2" text> Add to cart </v-btn>
+          <v-btn @click="goToFood()"   color="orange lighten-2" text> Add to cart </v-btn>
 
           <v-spacer></v-spacer>
 
@@ -41,16 +41,17 @@ export default {
   data() {
     return {};
   },
-  methods: {
-  foodDetails(item) {
-    this.$router.push({name:'food-details', params:item})
-  }
-  },
+ 
   computed: {
     products() {
       return this.$store.state.products;
     },
   },
+  methods: {
+    goToFood () {
+      this.$router.push('/food-details')
+    }
+  }
 };
 </script>
 
