@@ -40,6 +40,9 @@ export default {
   data() {
     return {};
   },
+  methods: {
+
+  },
   computed: {
     products() {
       return this.$store.state.products;
