@@ -5,6 +5,7 @@
       xs="12"
       sm="6"
       md="4"
+      @click="FoodDetails('items')"
       v-for="(product, i) in products"
       :key="i"
     >
@@ -41,7 +42,9 @@ export default {
     return {};
   },
   methods: {
-
+  foodDetails(item) {
+    this.$router.push({name:'food-details', params:item})
+  }
   },
   computed: {
     products() {
