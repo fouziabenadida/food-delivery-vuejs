@@ -1,13 +1,13 @@
 <template>
     <header>
   <div class="header">
-    <div class="logo">
+    <div @click="goTo('HomeView')" class="logo">
         <h4 class="sweet">eFood-Delivery</h4>
         <img class="photo" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" width="45px " height="45px" style="margin-left: 10px "  />
     </div>
 
 <div class="d-flex cart">
-  <i class="fa fa-shopping-cart cart-icon"></i>
+  <i @click="goTo('cart')" class="fa fa-shopping-cart cart-icon"></i>
   <span class="cart-count">{{count}}</span>
   <v-btn  class="login" >LogIn</v-btn>
   <v-btn class="sign" >Sign up</v-btn>
@@ -26,6 +26,11 @@ export default {
     computed: {
         count() {
             return this.$store.state.cartItemCount;
+        }
+    },
+    methods: {
+        goTo(page) {
+          page=== "HomeView" ? this.$router.push("/") : this.$router.push("/cart");
         }
     }
 }
