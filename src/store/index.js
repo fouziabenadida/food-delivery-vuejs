@@ -44,9 +44,48 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
+    addItem(state, payload) {
+      let item = payload;
+      item = { ...item, quantity: 1 }
+      if (state.cartItem.length > 0) {
+        let bool = state.cartItem.some(i => i.id == item.id)
+        if (bool) {
+          let itemIndex = state.cartItem.findIndex(el => el.id === item.id)
+          state.cartItem[itemIndex]["quantity"] += 1;
+        }
+        else {
+          state.cartItem.push(item)
+        }
+      } else {
+        state.cartItem.push(item)
+      }
+      state.cartItemCount++
+    },
+    removeItem(state, payload) {
+     if (state.cartItem.length > 0) {
+      let bool = state.cartItem.some(i => i.id === payload.id)
+
+      if (bool) {
+        let index  = state.cartItem.findIndex(el => el.id === payload.id)
+        if (state.cartItem [index]["quantity"] !== 1) {
+          state.cartItem [index]["quantity"] =
+          state.cartItemCount --
+        }
+       
+      }
+     }
+    }
+
+
 
   },
   actions: {
+    addItem: (context, payload) => {
+      context.commit("addItem", payload)
+    },
+    removeItem: (context, payload) => {
+      context.commit("removeItem", payload)
+    },
 
   },
 
