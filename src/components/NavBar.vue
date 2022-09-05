@@ -10,7 +10,7 @@
   <i @click="goTo('cart')" class="fa fa-shopping-cart cart-icon"></i>
   <span class="cart-count">{{count}}</span>
   <v-btn  class="login" >LogIn</v-btn>
-  <v-btn class="sign" >Sign up</v-btn>
+  <v-btn @click="signUp" class="sign" >Sign up</v-btn>
 
 </div>
 
@@ -31,7 +31,11 @@ export default {
     methods: {
         goTo(page) {
           page=== "HomeView" ? this.$router.push("/") : this.$router.push("/cart");
+        },
+        signUp () {
+            this.$router.push('/sign-up')
         }
+
     }
 }
 
